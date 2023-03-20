@@ -12,6 +12,27 @@
     <div class="container">
         <button id="btn">Tell me a joke</button>
         <audio id="audio" controls></audio>
+        <button class="goodJokesModalButton">Click here if joke is good</button>
+        <div class="modal">
+            <div class="modalContent">
+                <div class="modal-header">
+                    <span class="closeBtn">&times;</span>
+                    <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+                    <p class="joke-counter">
+                        <h1 class="counter">Number of good jokes:</h1>
+                        <p class="total">0</p>
+                        <button class="counter-minus">(-)</button>
+                        <button class="counter-plus">(+)</button>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <h3>Modal footer</h3>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- Script -->
     <script src="script.js"></script>

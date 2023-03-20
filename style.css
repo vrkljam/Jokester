@@ -10,11 +10,116 @@ body{
 }
 .container{
   height: 100vh;
-  width: 100vw;
+  width: 105vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: url('./robot.gif');
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
 }
-#btn{}
-#audio{}
+#btn{
+  
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: whitesmoke;
+  background-color: rgb(117, 117, 248);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 7px 7px 20px 10px rgba(0,0,0,0.5);
+}
+#btn:hover{
+  filter: brightness(75%)
+}
+#btn:active{
+  transform: scale(0.9);
+}
+#btn:disabled{
+  cursor: default;
+  filter: brightness(20%);
+}
+#audio{
+  margin-top: 50px;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.goodJokesModalButton{
+  background-color: coral;
+  color: white;
+
+}
+.goodJokesModalButton:hover{
+  background-color: gray;
+}
+
+.modalContent{
+  text-align: center;
+background-color: white;
+margin:10% auto;
+padding: 20px;
+width:70%;
+box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.2);
+animation-name: modalOpen;
+animation-duration: 2s;
+}
+.modal-body{
+  /* align-items: center; */
+  justify-content: center;
+}
+.closeBtn{
+  color: #ccc;
+}
+.closeBtn:hover, .closeBtn:focus{
+  cursor: pointer;
+  color: black;
+
+}
+.counter{
+  margin: 5px 0;
+  color:black;
+}
+.total{
+  margin-top: 0;
+  margin-left: 48%;
+  font-size: 20px;
+  font: bold;
+  color: whitesmoke;
+  border: 1px solid white;
+  background-color: red;
+  height: 30px;
+  width: 30px;
+  }
+.counter-minus, .counter-plus {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+}
+/* Medea query tab or smaller */
+@keyframes modalOpen{
+  from {opacity: 0;}
+  to {opacity: 1;}
+  
+}
+@media screen and (max-width:1000px){
+  .container{
+    background-position: center center;
+    background-size: cover;
+  }
+}
